@@ -14,10 +14,14 @@ export const ColorTool = () => {
     setShouldDarken(e.target.checked)
   }
 
+  const handleColorInputChange = (e) => {
+    setInputColor(e.target.value)
+  }
+
   return (
     <div>
       <h2>Color Slider</h2>
-      <ColorPicker color={inputColor} />
+      <ColorPicker color={inputColor} handler={handleColorInputChange} />
       <Switch handler={handleCheckboxChange} />
       <ColorSlider value={sliderValue} />
       <ColorDisplayBox color={inputColor} purpose="INPUT" />
