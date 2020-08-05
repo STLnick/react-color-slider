@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import convert from 'color-convert'
 
 import { ColorDisplayBox } from './ColorDisplayBox'
 import { ColorPicker } from './ColorPicker'
