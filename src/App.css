@@ -3,6 +3,10 @@ main {
   width: 100vw;
 }
 
+input[type="range"] {
+  width: 10rem;
+}
+
 /* * Reuseable Classes * */
 
 .screen-reader-text {
