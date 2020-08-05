@@ -1,8 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export const ColorPicker = () => {
+export const ColorPicker = ({ color, handler }) => {
 
   return (
-    <p>Color Picker here</p>
+    <input onChange={handler} type="color" value={color} />
   )
+}
+
+ColorPicker.propTypes = {
+  color: PropTypes.string,
+  handler: PropTypes.func
 }
