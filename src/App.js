@@ -6,6 +6,8 @@ import './App.css';
 
 export const App = () => {
   return (
-    <ColorTool />
+    <main className="flex flex--align-center flex--justify-center">
+      <ColorTool />
+    </main>
   );
 }
