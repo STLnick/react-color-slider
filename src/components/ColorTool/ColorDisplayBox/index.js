@@ -8,9 +8,9 @@ export const ColorDisplayBox = ({ color, purpose }) => {
   }
 
   return (
-    <p style={styling}>
+    <div style={styling}>
       I'm the {purpose} Color Box
-    </p>
+    </div>
   )
 }
 
