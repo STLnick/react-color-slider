@@ -14,6 +14,16 @@ export const ColorTool = () => {
   const [shouldDarken, setShouldDarken] = useState(false)
   const [sliderValue, setSliderValue] = useState(0)
 
+  const adjustColor = (makeDarker, changeValue) => {
+    // Convert hex to hsl and store returned values
+    let [h, s, l] = convert.hex.hsl(inputColor)
+
+    // If DARKEN is selected subtract from lightness else add to it
+    makeDarker ? l -= (changeValue / 2) : l += (changeValue / 2)
+
+    setAlteredColor(`hsl(${h}, ${s}%, ${l}%)`)
+  }
+
   const handleCheckboxChange = (e) => {
     setShouldDarken(e.target.checked)
   }
