@@ -1,16 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const ColorDisplayBox = ({ color, purpose }) => {
+import './ColorDisplayBox.css'
+
+export const ColorDisplayBox = ({ displayColor, label }) => {
 
   return (
-    <div style={{ backgroundColor: color }}>
-      I'm the {purpose} Color Box
+    <div>
+      <p>{label}</p>
+      <div className="colorBox" style={{ backgroundColor: displayColor }}></div>
     </div>
   )
 }
 
 ColorDisplayBox.propTypes = {
-  color: PropTypes.string,
-  purpose: PropTypes.string
+  displayColor: PropTypes.string,
+  label: PropTypes.string
 }
