@@ -10,6 +10,10 @@ export const ColorTool = () => {
   const [shouldDarken, setShouldDarken] = useState(false)
   const [sliderValue, setSliderValue] = useState(0)
 
+  const handleCheckboxChange = (e) => {
+    setShouldDarken(e.target.checked)
+  }
+
   return (
     <div>
       <h2>Color Slider</h2>

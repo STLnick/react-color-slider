@@ -1,8 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export const Switch = () => {
-
+export const Switch = ({ handler }) => {
   return (
-    <p>SWITCH</p>
+    <input type="checkbox" onChange={handler} />
   )
+}
+
+Switch.propTypes = {
+  handler: PropTypes.func
 }
