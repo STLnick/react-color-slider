@@ -1,13 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const ColorSlider = ({ value }) => {
+export const ColorSlider = ({ handler, value }) => {
 
   return (
-    <input type="range" max="100" min="0" value={value} />
+    <div className="flex flex--align-center">
+      <label htmlFor="slider">{value}%</label>
+      <input id="slider" onChange={handler} type="range" max="100" min="0" value={value} />
+    </div>
   )
 }
 
 ColorSlider.propTypes = {
+  handler: PropTypes.func,
   value: PropTypes.number
 }
