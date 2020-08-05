@@ -3,12 +3,8 @@ import PropTypes from 'prop-types'
 
 export const ColorDisplayBox = ({ color, purpose }) => {
 
-  const styling = {
-    backgroundColor: color
-  }
-
   return (
-    <div style={styling}>
+    <div style={{backgroundColor: color }}>
       I'm the {purpose} Color Box
     </div>
   )
