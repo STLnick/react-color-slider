@@ -9,6 +9,7 @@ import { Switch } from './Switch'
 import './ColorTool.css'
 
 export const ColorTool = () => {
+  const [alteredColor, setAlteredColor] = useState('#ffff00')
   const [inputColor, setInputColor] = useState('#ffff00')
   const [shouldDarken, setShouldDarken] = useState(false)
   const [sliderValue, setSliderValue] = useState(0)
