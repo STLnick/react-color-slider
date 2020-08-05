@@ -26,15 +26,20 @@ export const ColorTool = () => {
 
   const handleCheckboxChange = (e) => {
     setShouldDarken(e.target.checked)
+    adjustColor(e.target.checked, sliderValue)
   }
 
   const handleColorInputChange = (e) => {
     setInputColor(e.target.value)
+    setAlteredColor(e.target.value)
   }
 
   const handleSliderChange = (e) => {
-    setSliderValue(e.target.value)
+    setSliderValue(Number(e.target.value))
+    adjustColor(shouldDarken, e.target.value)
   }
+
+
 
   return (
     <div className="container flex flex--column flex--justify-evenly">
@@ -42,8 +47,8 @@ export const ColorTool = () => {
       <ColorPicker color={inputColor} handler={handleColorInputChange} />
       <Switch handler={handleCheckboxChange} />
       <ColorSlider handler={handleSliderChange} value={sliderValue} />
-      <ColorDisplayBox color={inputColor} purpose="INPUT" />
-      <ColorDisplayBox color={inputColor} purpose="OUTPUT" />
+      <ColorDisplayBox displayColor={inputColor} label="Input Color" />
+      <ColorDisplayBox displayColor={alteredColor} label="Altered Color" />
     </div>
   )
 }
