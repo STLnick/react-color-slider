@@ -20,12 +20,16 @@ export const ColorTool = () => {
     setInputColor(e.target.value)
   }
 
+  const handleSliderChange = (e) => {
+    setSliderValue(e.target.value)
+  }
+
   return (
     <div className="container flex flex--column flex--justify-evenly">
       <h2>Color Slider</h2>
       <ColorPicker color={inputColor} handler={handleColorInputChange} />
       <Switch handler={handleCheckboxChange} />
-      <ColorSlider value={sliderValue} />
+      <ColorSlider handler={handleSliderChange} value={sliderValue} />
       <ColorDisplayBox color={inputColor} purpose="INPUT" />
       <ColorDisplayBox color={inputColor} purpose="OUTPUT" />
     </div>
