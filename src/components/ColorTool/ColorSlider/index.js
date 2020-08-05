@@ -1,8 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export const ColorSlider = () => {
+export const ColorSlider = ({ value }) => {
 
   return (
-    <p>Color Slider here</p>
+    <input type="range" max="100" min="0" value={value} />
   )
+}
+
+ColorSlider.propTypes = {
+  value: PropTypes.number
 }
