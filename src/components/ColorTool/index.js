@@ -13,11 +13,11 @@ export const ColorTool = () => {
   return (
     <div>
       <h2>Color Slider</h2>
-      <ColorPicker />
-      <Switch />
-      <ColorSlider />
-      <ColorDisplayBox purpose="INPUT" />
-      <ColorDisplayBox purpose="OUTPUT" />
+      <ColorPicker color={inputColor} />
+      <Switch handler={handleCheckboxChange} />
+      <ColorSlider value={sliderValue} />
+      <ColorDisplayBox color={inputColor} purpose="INPUT" />
+      <ColorDisplayBox color={inputColor} purpose="OUTPUT" />
     </div>
   )
 }
