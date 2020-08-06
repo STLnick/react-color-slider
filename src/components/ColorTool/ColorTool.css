@@ -1,11 +1,17 @@
 .container {
-  border: 2px solid dodgerblue;
+  border: 2px solid var(--primary-color);
   border-radius: 15px;
   max-width: 700px;
   padding: 2rem;
   width: 50%;
 }
 
-.container * {
-  margin-top: 1rem;
+.container > * {
+  margin-top: 2rem;
+}
+
+h2 {
+  color: var(--primary-color);
+  font-size: 32px;
+  text-align: center;
 }
