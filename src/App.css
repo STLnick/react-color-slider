@@ -3,6 +3,11 @@ main {
   width: 100vw;
 }
 
+input[type="color"] {
+  height: 2rem;
+  width: 10rem;
+}
+
 input[type="range"] {
   width: 10rem;
 }
