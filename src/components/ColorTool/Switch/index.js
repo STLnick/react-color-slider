@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './Switch.css'
-
 export const Switch = ({ handler }) => {
+
+  // TODO: Redo with bulma
   return (
     <div>
       <span className="slider-label light-label">Lighter</span>

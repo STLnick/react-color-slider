@@ -32,6 +32,7 @@ export const ColorTool = () => {
   const handleColorInputChange = (e) => {
     setInputColor(e.target.value)
     setAlteredColor(e.target.value)
+    setSliderValue(0)
   }
 
   const handleSliderChange = (e) => {

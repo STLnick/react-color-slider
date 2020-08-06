@@ -1,4 +1,4 @@
-main {
+/* main {
   height: 100vh;
   width: 100vw;
 }
@@ -10,7 +10,7 @@ input[type="color"] {
 
 input[type="range"] {
   width: 10rem;
-}
+} */
 
 /* * Reuseable Classes * */
 
@@ -22,7 +22,7 @@ input[type="range"] {
 
 /* Flex Classes */
 
-.flex {
+/* .flex {
   display: flex;
 }
 
@@ -60,4 +60,4 @@ input[type="range"] {
 
 .flex--wrap {
   flex-wrap: wrap;
-}
+} */
