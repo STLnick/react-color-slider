@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import './Switch.css'
+
 export const Switch = ({ handler }) => {
   return (
     <div>
